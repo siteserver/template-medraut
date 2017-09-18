@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include> 
+    <stl:include file="/include/banner.html"></stl:include>
+    <div class="about or"> 
+      <stl:include file="/include/tabs.html"></stl:include> </div>
+    <stl:channels channelIndex="合作伙伴">
+      <div class="partner or">
+        <h1>{Channel.Title}</h1>
+        <div class="con or">
+          <stl:contents>
+            <dl>
+              <dd><img src="{Content.ImageUrl}"></dd>
+              <dt>{Content.Title}</dt>
+            </dl>
+          </stl:contents>
+        </div>
+      </div>
+    </stl:channels>
+    <stl:include file="/include/footer.html"></stl:include>
+  </body>
+</html>

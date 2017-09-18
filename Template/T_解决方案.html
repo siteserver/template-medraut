@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include>
+    <stl:include file="/include/banner.html"></stl:include>
+    <div class="case or">
+      <div class="top or">
+        <h1>大数据解决方案</h1>
+        <div class="biaoti or">
+          <stl:channels channelIndex="解决方案">
+            <stl:if type="ItemIndex" operate="In" value="1,2">
+              <stl:yes>
+                <stl:if testType="UpChannelOrSelf">
+                  <stl:yes>
+                    <dl>
+                      <stl:a class="on">
+                        <dd>{Channel.Title}</dd>
+                        <dt>{Channel.Content}</dt>
+                      </stl:a>
+                    </dl> 
+                  </stl:yes>
+                  <stl:no>
+                    <dl>
+                      <stl:a>
+                        <dd>{Channel.Title}</dd>
+                        <dt>{Channel.Content}</dt>
+                      </stl:a>
+                    </dl>
+                  </stl:no>
+                </stl:if>
+              </stl:yes>
+              <stl:no>
+                <dl class="last">
+                  <stl:a>
+                    <dd>{Channel.Title}</dd>
+                    <dt>{Channel.Content}</dt>
+                  </stl:a>
+                </dl> 
+              </stl:no>
+            </stl:if>
+          </stl:channels>
+        </div>
+      </div>
+      <div class="bottom or">
+        <stl:pageContents pageNum="1">
+          <div class="list or ">
+            <dl>
+              <dd><stl:a class="bt" target="_blank"><img src="{Content.ImageUrl}"></stl:a></dd>
+              <dt> 
+                <h1>{Content.Title}</h1>
+                <p>{Content.Title}</p>
+              </dt>
+            </dl>
+            <div class="txt">
+              <div class="fl">
+                <stl:content type="Content"></stl:content>
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </stl:pageContents>
+        <div class="page">
+          <stl:pageItem type="PageNavigation" listNum="5">
+            <stl:yes>
+              <a href="{Current.Url}">{Current.Num}</a>
+            </stl:yes>
+            <stl:no>
+              <span>{Current.Num}</span>
+            </stl:no>
+          </stl:pageItem>
+        </div>
+      </div>
+    </div>
+    <div class="eject">
+      <div class="theme-mask2"></div>
+      <div class="popover2">
+        <a href="javascript:void(0)" class="close2">x</a>
+        <video src="" width="800px" height="450px" loop='true'  autoplay controls="controls" id="videostr"></video>
+        
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function($){
+      
+      $('.v_bq_vico').click(function(){
+      $('.theme-mask2').show();
+      $('.theme-mask2').height($(document).height());     
+      $("#videostr").attr('src',$(this).attr('belong'));
+      $('.popover2').slideDown(200);
+      })
+      $('.close2').click(function(){
+      playPause();
+      $('.theme-mask2').hide();
+      $('.popover2').slideUp(200);
+      
+      })
+      
+      })
+      function playPause() {
+      var myVideo = document.getElementsByTagName('video')[0];
+      if(myVideo.paused){
+      myVideo.play();
+      }else{
+      myVideo.pause();
+      }
+      }
+      
+    </script>
+    
+    
+    <stl:include file="include/footer.html"></stl:include>
+  </body>
+</html>

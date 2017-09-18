@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<stl:include file="/include/head.html"></stl:include>
+<body>
+<stl:include file="/include/header.html"></stl:include> 
+<!--header-->
+
+<div class="sliderContainer fullWidth clearfix">
+  <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+  <stl:contents channelIndex="新闻资讯" isRecommend="true" order="AddDate" totalNum="5">
+    <div class="rsContent"> <stl:a><stl:image class="rsImg rsMainSlideImage" type="ImageUrl" no="2"></stl:image></stl:a>
+    </div>
+  </stl:contents>
+  </div>
+</div>
+<div class="plan or">
+  <h1>大数据解决方案</h1>
+  <div class="con or">
+    <stl:channels channelIndex="解决方案">
+    <stl:if type="ItemIndex" operate="In" value="1,2">
+    <stl:yes>
+      <dl>
+        <stl:a>
+        <dd><img src="{Channel.ImageUrl}"></dd>
+        <dt>
+          <h2>
+            {Channel.Title}
+          </h2>
+          <p>
+            {Channel.Content}
+          </p>
+        </dt>
+        </stl:a>
+      </dl>
+    </stl:yes>
+    <stl:no>
+      <dl class="last">
+        <stl:a>
+        <dd><img src="{Channel.ImageUrl}"></dd>
+        <dt>
+          <h2>
+            {Channel.Title}
+          </h2>
+          <p>
+            {Channel.Content}
+          </p>
+        </dt>
+        </stl:a>
+      </dl>
+    </stl:no>
+    </stl:if>
+    </stl:channels>
+  </div>
+  <!--con--> 
+  
+</div>
+<!--plan-->
+
+<div class="index_news or">
+  <stl:channels channelIndex="关于我们" totalNum="3">
+  <stl:if testType="ItemIndex" testOperate="In" testValue="1,2">
+  <stl:yes>
+    <dl>
+      <stl:a>
+      <dd><img src="{Channel.ImageUrl}"></dd>
+      <dt>
+        <h1></h1>
+        <stl:channel type="Content" isClearTags="true" wordNum="70" ellipsis="..."></stl:channel> <span>查看详情&gt;</span> </dt>
+      </stl:a>
+    </dl>
+  </stl:yes>
+  <stl:no>
+    <dl class="last">
+      <stl:a>
+      <dd><img src="{Channel.ImageUrl}"></dd>
+      <dt>
+        <h1></h1>
+        <stl:channel type="Content" isClearTags="true" wordNum="70" ellipsis="..."></stl:channel> <span>查看详情&gt;</span> </dt>
+      </dt>
+      </stl:a>
+    </dl>
+  </stl:no>
+  </stl:if>
+  </stl:channels>
+</div>
+<!--index_news--> 
+<script type="text/javascript">
+$("div.navbar-fixed-top").autoHidingNavbar();
+jQuery(document).ready(function($) {
+$('#full-width-slider').royalSlider({
+arrowsNav: true,
+loop: false,
+keyboardNavEnabled: true,
+controlsInside: false,
+imageScaleMode: 'fill',
+arrowsNavAutoHide: false,
+autoScaleSlider: true, 
+autoScaleSliderWidth: 960,     
+autoScaleSliderHeight:640,
+controlNavigation: 'bullets',
+thumbsFitInViewport: false,
+navigateByClick: true,
+startSlideId: 0,
+autoPlay:true,
+transitionType:'move',
+globalCaption: true,
+deeplinking: {
+enabled: true,
+change: false
+},
+imgWidth: 1980,
+imgHeight:640
+});
+});
+</script> 
+<stl:include file="/include/footer.html"></stl:include>
+</body>
+</html>

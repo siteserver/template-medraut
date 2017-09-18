@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<stl:include file="/include/head.html"></stl:include>
+<body>
+   <stl:include file="/include/header.html"></stl:include>
+   <stl:include file="/include/banner.html"></stl:include>
+<div class="about or">
+ <stl:include file="/include/tabs.html"></stl:include>
+<div class="lecturer or">
+<stl:contents>
+<stl:if type="ItemIndex" operate="In" value="3,6,9,12">
+<stl:yes>
+  <dl class="last">
+  <dd><a href="javascript:;"><img src="{Content.ImageUrl}"></a></dd>
+  <dt>
+  <stl:a>
+   <h1>{Content.Title}</h1>
+   <h2>{Content.SubTitle} </h2>
+   </stl:a>
+  </dt>
+</dl>
+  </stl:yes>
+  <stl:no>
+ <dl>
+  <dd><a href="javascript:;"><img src="{Content.ImageUrl}"></a></dd>
+  <dt>
+  <stl:a>
+  <h1>{Content.Title}</h1>
+   <h2>{Content.SubTitle} </h2>
+  </stl:a>
+  </dt>
+</dl>
+</stl:no>
+</stl:if>
+</stl:contents>
+</div>
+</div>
+<stl:include file="/include/footer.html"></stl:include>
+</body>
+</html>

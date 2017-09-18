@@ -1,0 +1,50 @@
+<div class="main_foot">
+<div class="foot">
+<stl:channels topLevel="0">
+<stl:if testType="ItemIndex" testOperate="Equals" testValue="4">
+    <stl:yes>
+        <ul >
+        <li><h1>{Channel.Title}</h1></li>
+        <stl:channels>
+                <li><stl:a>{Channel.Title}</stl:a></li>
+        </stl:channels>
+        </ul>
+    </stl:yes>
+    <stl:no>
+        <ul class="last">
+        <li><h1>{Channel.Title}</h1></li>
+        <stl:channels>
+                <li><stl:a>{Channel.Title}</stl:a></li>
+        </stl:channels>
+        </ul>
+    </stl:no>
+</stl:if>
+</stl:channels>
+<div class="foot_r">
+		 <a href="http://t.qq.com/siteserver2011" target="_blank"><img src="{Stl.SiteUrl}/images/weibo.svg"/></a>
+	   	 <a href="#none" class="weixin"><img src="{Stl.SiteUrl}/images/weixin.svg" /></a>
+</div>
+</div>
+<div class="bottom or">
+ <p> 
+      <stl:contents channelIndex="关于我们">
+        <stl:itemTemplate type="Item">  
+        	<stl:a target="_blank">{Content.Title}</stl:a>
+        </stl:itemTemplate>
+        <stl:itemTemplate type="Separator">
+        |
+        </stl:itemTemplate>
+      </stl:contents>
+      <span> © Copyright 2017</span>
+  </p>
+</div>
+</div>    
+   <div class="eject">
+	  <div class="theme-mask"></div>
+	  <div class="popover1">
+	   <dl><dd>{stl:value type=weichat}</dd>
+	   <dt>扫描二维码关注我们</dt>
+	   <dt><a href="javascript:void(0)" class="close">确 认</a></dt>
+	   </dl>
+	   </div>
+	</div>

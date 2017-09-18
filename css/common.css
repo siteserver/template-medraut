@@ -1,0 +1,85 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,section, article, aside, header, footer, nav, dialog, figure,menu,hgroup{ margin:0; padding:0; border:0;  font-family:"Microsoft YaHei";}
+html{ -webkit-text-size-adjust:none;}
+body{ font-size:12px; line-height:24px; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased;  font-smoothing: antialiased; color:#444;}
+input,textarea{ resize:none; font-family:"Microsoft YaHei"; }
+img{ border:none; vertical-align:bottom; max-width:100%;}
+ul,li{ list-style:none;}
+a{ text-decoration:none; color:#333;}
+a:hover{ color:#d72128;}
+a:focus{outline:none;}
+h1,h2{ font-weight:normal;}
+input:focus,textarea:focus{ outline:none;}
+em,i{ font-style:normal;}
+ 
+
+.main{ clear:both; overflow:hidden; width:1200px; margin:0 auto; }
+.fl{ float:left;}
+.fr{ float:right;}
+.or{ overflow:hidden;}
+
+a.red{ background:#ff6d9a; border-radius:3px; color:#fff; -webkit-transition: all 0.5s  ease-in-out; transition: all 0.5s ease-in-out;}
+a.red:hover{ background:#ec477a;}
+
+a.yellow{ background:#ffb400; border-radius:3px; color:#fff; -webkit-transition: all 0.5s  ease-in-out; transition: all 0.5s ease-in-out;}
+a.yellow:hover{ background:#e7a300;}
+
+a.bai{ background:#fff; border:1px solid #e4e4e4; border-radius:3px; color:#777; -webkit-transition: all 0.5s  ease-in-out; transition: all 0.5s ease-in-out;}
+a.bai:hover{ background:#ff6d9a; border:1px solid #ff6d9a; color:#fff;}
+ 
+
+ 
+ 
+
+.main_foot { width:100%; background:#f9f9f9;  overflow:hidden; padding-bottom:30px; }
+.foot { width:1000px; overflow:hidden; margin:30px auto;}
+.foot ul { float:left; text-align:left; line-height:24px;  width:150px; margin-right:50px; }
+.foot ul.last{ margin:0; }
+ 
+.foot ul h1 {font-size:16px; margin-bottom:10px;}
+.main_foot a { color:#555; }
+.main_foot a:hover { text-decoration:underline;}
+.foot .foot_r { width:215px; float:right; }
+.foot .foot_r a{   width:30px; height:30px; display:inline-block; margin-left:10px;}
+.foot .foot_r a.weibo{ background-position:-21px 0;}
+.foot .foot_r a.weixin{ background-position:-58px 0;}
+ 
+.main_foot .bottom{ width:1000px; margin:0 auto; clear:both; border-top:1px solid #e9e9e9; padding-top:25px; color:#777;}
+.foot_logo{ float:left;}
+.main_foot .bottom p{ float: left;margin-left: 320px;}
+.main_foot .bottom span{ float:right;}
+.main_foot .bottom a{ color:#777; margin:0 10px; display:inline-block}
+.main_foot .bottom a:hover{ text-decoration:underline; }
+
+@media screen and (max-width:1010px){
+.foot,.main_foot .bottom{ width:95%; }	 
+}
+@media screen and (max-width:760px){
+.foot ul { width:46%; padding:0 2%;  margin-right:0px; height:260px; text-align:center;}
+.foot ul:nth-last-child(3){ height:180px;}
+.foot ul:nth-last-child(2){ height:180px;}
+.foot .foot_r{ width:100%; float:none; text-align:center;  }
+.foot_logo{ float:none; width:96px; margin:0 auto;}
+.main_foot .bottom p{ margin:15px auto; width:85%; line-height:24px; text-align:center; float:none;}
+.main_foot .bottom span{ float:none; width:85%; text-align:center; margin:0 auto; display:block; } 
+}
+@media screen and (max-width:476px){
+
+}
+  
+ 
+.page{ clear:both; font-size:14px; margin:40px 0; text-align:center; line-height:28px; overflow:hidden; color:#333;}
+.page a{ background:#fff; border:1px solid #e0e0e0; color:#333; display:inline-block; width:28px; margin:0 5px; border-radius:2px;}
+.page a:hover{ background:#d72128; border:1px solid #d72128; color:#fff;} 
+.page span{  background:#d72128;  border:1px solid #d72128; color:#fff; display:inline-block;  width:28px;font-weight:bold;   margin:0 5px; border-radius:2px;  }
+ 
+ 
+ 
+.theme-mask{z-index:10000;position:fixed; _position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);-moz-opacity:0.5; display:none; }
+.popover1{ width:360px; height:400px; z-index:100001; position:fixed; top:50%;left:50%; background:#fff; margin:-200px 0 0 -180px;   box-shadow:1px 1px 6px 3px rgba(0,0,0,.2); display:none; text-align:center;}
+.popover1 dl{ margin-top:60px; font-size:14px; color:#333; line-height:40px;}
+.popover1 dl a{ width:110px; height:40px; background:#24b728; color:#fff; display:inline-block; border-radius:2px; font-size:14px;} 
+ 
+#qrcode img {
+	margin: 0 auto
+}
+ 

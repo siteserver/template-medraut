@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include>
+    <stl:include file="/include/banner.html"></stl:include>
+    <div class="about or">
+      <stl:include file="/include/tabs.html"></stl:include>
+      <div class="contact or">
+        <div class="top or"> 
+          <stl:contents>
+            <stl:if testType="ItemIndex" testOperate="In" testValue="3,6,9,12">
+              <stl:yes>
+                <dl class="last">
+                  <dt>
+                    <h1>{Content.Title}</h1>
+                    <p>地址：{Content.SubTitle}</p>
+                    <p>电话：<stl:content type="Content" isClearTags="true"></stl:content></p>
+                  </dt>
+                </dl>
+              </stl:yes>
+              <stl:no>
+                <dl>
+                  <dt>
+                    <h1>{Content.Title}</h1>
+                    <p>地址：{Content.SubTitle}</p>
+                    <p>电话：<stl:content type="Content" isClearTags="true"></stl:content></p>
+                  </dt>
+                </dl>
+              </stl:no>
+            </stl:if>
+          </stl:contents> 
+        </div>
+        <div class="bottom or">
+          <p>邮箱：admin@siteserver.cn</p>
+          <p>{stl:value type=weichat}</p>
+          <p style="font-size: 14px;line-height: 40px;margin-top: -21px;">官方微信</p>
+        </div>
+      </div>
+    </div>
+    <stl:include file="/include/footer.html"></stl:include>
+  </body>
+</html>

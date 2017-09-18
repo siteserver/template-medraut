@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"  />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no">
+<meta content="email=no" name="format-detection" />
+<title>Medraut</title>
+<!--css样式开始-->
+<link href="/Medraut/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/Medraut/css/ext.css" rel="stylesheet" type="text/css" />
+<link href="/Medraut/css/top.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/Medraut/css/index.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/Medraut/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<!--css样式结束-->
+<!--js控件开始-->
+<script type="text/javascript" src="/Medraut/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/Medraut/js/common.js"></script> 
+<script type="text/javascript" src="/Medraut/js/bootstrap-collapse.js"></script>
+<script type="text/javascript" src="/Medraut/js/jquery.royalslider.min.js?v=9.3.6"></script> 
+<script type="text/javascript" src='/Medraut/js/qrcode.js'></script>
+<script type='text/javascript' src="/Medraut/js/bootstrap.js"></script>
+<script type='text/javascript' src="/Medraut/js/jquery.bootstrap-autohidingnavbar.js"></script>
+<!--js控件结束-->
+<script language="javascript">
+var userId = 0;		 
+var userName = ''; 
+var nickName = '';	 
+</script>
+
+<!--<script>!function(a,b,c,d,e,f){var g="",h=a.sessionStorage,i="__admaster_ta_param__",j="tmDataLayer"!==d?"&dl="+d:"";
+if(a[f]={},a[d]=a[d]||[],a[d].push({startTime:+new Date,event:"tm.js"}),h){var k=a.location.search,
+l=new RegExp("[?&]"+i+"=(.*?)(&|#|$)").exec(k)||[];l[1]&&h.setItem(i,l[1]),l=h.getItem(i),
+l&&(g="&p="+l+"&t="+ +new Date)}var m=b.createElement(c),n=b.getElementsByTagName(c)[0];m.src="//tag.cdnmaster.com/tmjs/tm.js?id="+e+j+g,
+m.async=!0,n.parentNode.insertBefore(m,n)}(window,document,"script","tmDataLayer","TM-AZHG3B","admaster_tm");</script>-->
+
+<script>var $pageInfo = {publishmentSystemID : 397, channelID : 397, contentID : 0, siteUrl : "/Medraut", homeUrl : "/home", currentUrl : "/Medraut/utils/search.html", rootUrl : "", apiUrl : "/api"};</script></head>
+  <body>
+<script type="text/javascript">!window.jQuery&&document.write('<script src="/sitefiles/assets/components/jquery-1.9.1.min.js" language="javascript"></'+'script>');</script>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/Medraut/index.html"><img src="/Medraut/upload/images/2017/9/t_8142456316.png" /></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+          
+          
+          		<li><a href="/Medraut/channels/399.html">解决方案</a></li>
+          
+          
+          
+          		<li><a href="/Medraut/channels/402.html">新闻资讯</a></li>
+          
+          
+          
+          		<li><a href="/Medraut/channels/407.html">通知公告</a></li>
+          
+          
+          
+          		<li><a href="/Medraut/channels/412.html">关于我们</a></li>
+          
+          
+          </ul>
+          
+          <ul class="navbar-right">
+            
+             <li><a href="http://docs.siteserver.cn/getting-started/what-can-do.html" target="_blank">联系我们</a></li>
+        	 
+             <li><span></span></li>
+               
+             <li><a href="http://stl.siteserver.cn" target="_blank">English</a></li>
+        	 
+             <li><span></span></li>
+               
+             <li><a href="http://developer.siteserver.cn/" target="_blank">开发者中心</a></li>
+        	 		 
+		   </ul>
+        </div>
+      </div>
+    </div>
+    <div class="about_box big" style="background:url(/Medraut/images/bg.jpg) no-repeat center top; background-size:cover;">
+      <h1>搜索结果页</h1>
+    </div>
+    <div class="Marketing_box">
+      <div class="search or">
+        <form method="get" action="/Medraut/utils/search.html">
+          <input type="text" name="word" placeholder="搜索文章" class="txt">
+          <input type="submit" class="btn" value="">
+        </form>
+      </div>
+    </div>
+    <div class="cl"></div>
+    <div class="news or"> 
+      <div id="ajaxElement_1_153"><div class="loading"><div class="alert alert-info" role="alert">
+            <strong>提示!</strong> 系统正在搜索中，请稍后...
+          </div></div><div class="yes"></div><div class="no"><div class="alert alert-danger" role="alert">
+            <strong>抱歉!</strong> 找不到和您的查询相符的项目
+          </div></div></div>
+<script type="text/javascript" language="javascript">
+jQuery(document).ready(function(){
+    jQuery("#ajaxElement_1_153 .loading").show();
+    jQuery("#ajaxElement_1_153 .yes").hide();
+    jQuery("#ajaxElement_1_153 .no").hide();
+
+    var url = '/api/stl/actions/search';
+    var parameters = 
+{
+    publishmentSystemId: '397',
+    ajaxDivId: 'ajaxElement_1_153',
+    pageNum: 0,
+    isHighlight: true,
+    isRedirectSingle: false,
+    isDefaultDisplay: false,
+    dateAttribute: 'AddDate',
+    charset: 'utf-8',
+    template: 'e8lUF0slash0a6ssSilaEDzCwYbK8aHfQck2AcoqcEMLG4Ua8Z5ziIN0HPR83b0ZuGYwWLpgS4kAROwuxvfYek978DvtIwVBoEx19xqnFNkfRYePJ9VSD9vmkLXKf6huPoNZ0slash0D0slash0aDrkIPxozjpsH3Z1ySPxeOTKf0add0kS8Ge1exVtX2jWcJ4e9IMf0add04JdgZyIFJ2VfH9YxFXVZJdF6Mb0add0XzxKEhZeqct5FYg0cfgmdBvc1l212EBRwJVzji08yHjOPSBiamRpvGsLYO0slash0Zcnfv9Z3DviBQyAv7mLg4J8YELDFOJ6dEibggMeGx8VE38cdow5soFftsrHTU4744q0fybKR76WOjYwY0add0A0wAoIkqEH9Nj8VtcyKxP0uwxndUl56JPKx07m0add0E50bATCPeDx70HNbwwl0slash0cj928xYHl9l0add00DGqPAEEVHxSGdjUJZ0vOnao0slash0xETq1HX0add0O5yS3Z21B4g6YC3ua9SL104ORIRRaVZ6bql0slash05QsxhsTOQCJpgbnDmFcx6MfGb0add0MyvIjcehiBdd1KnoHoPys2N7D5BxWdeZQDgMg0add0vxpTnNW6hin04KOFreGb1p9ciT0fHPYuZcn7h4fmBiCkfHOemCdqMA45Xx1rgwCp3hGhsd0kiAZGdIeOigGEKANneCKtnju784t8roYLi4v8ph6TnNVuhFn0add0zHfs0slash0byWT7qnqgxHOvypZhONKCZUjJDTiII9OEs4nUIm7xx5euHK6BO0slash02OrQFbyKHvQfn6UeWbeiHlVf5qpQBu0add0ZhKYOACLWw1taihbOgriZteP7iou4iP2tPiAIVrWRGxpbRCRBMD9lKZf0add0ydjv1YuDbLyzZjgXeJdWuWteqomx6QK8faN4LTFkf2l2sNMpsFNJeSsoFv3gKIvNuCJR77ybhcOJ6MkYfPeTqXKzF0add0qI8rSsg5AbXf0slash0a3La4mWiH7cEZnzJO0add0we35od2WIAtT4yxQWr72znXer0slash0EvaADRygfkqhCldzqjJODm0add0lLICCGOj0add0W5vOdW0whqP7jPUNJ4pPNgDNbYvIxNzu0slash00add05fsiVr5GGu6F3axaRQBx0add0sBQnkN6Mxom0add01jzn6vcVqtZchFLqRilJiLeFIeT9xN9XLW4x9ggW81NB36lfQFrd7V3Ll48MeE7bCvnYRtDADOKNDYkbuthyU69VtBuFhN9eC9hxnlXsNGZafpUzo40YXcYFfKMzzXdilouSJHYPuzIuF2wri2FcYtpoMBxTI4SU1r9Gul8VgX2iKY0slash0lhN5pKOICU2R0add0QQWor0add0g2N2hTADS0add0TwlGDq1ppS3JXJLiJf2Vt0slash0tts1vpiHB1H8MWL5KBwTAbzYhiPAtjAzjMjDn0slash0yHNbp0H8zpW6aXiUEnl3QFI7HJfu0add084tPqi841WziGuJDeyxwkXZpLbvYmUPOOum7W0slash0JKMSwUHdsVNVDgUMlKvjNMKgzEHbmNmkN642Pin0slash0iwIzZVN8Nbh39pjtYDWgfTjrPWkYnre1v5ozXV0add0UY0add0Pb62usUiwx8H0add0j76H00PXdoroKhxWzQRSOFgK0add0JAhWOVCalJgTpqzegqIBwY5fLVLtpRZUmQSE0slash0XfPj5ApT2xebNInRE0add0sv74lLf3Ah7sfWbs2FGSfBSGUaqevBtS0add0CefhYXqQ0slash0KQS1QGhztDIJP6Xf0qUrm2l9N7uZyWXDC6tI0equals0'
+};
+
+    var queryString = document.location.search;
+    if (queryString && queryString.length > 1) {
+        queryString = queryString.substring(1);
+        var arr = queryString.split('&');
+        for(var i=0; i < arr.length; i++) {
+            var item = arr[i];
+            var arr2 = item.split('=');
+            if (arr2 && arr2.length == 2) {
+                parameters[arr2[0]] = decodeURIComponent(arr2[1]);
+            }
+        }
+        if (!parameters['page']) {
+            parameters['page'] = 1;
+        }
+
+        jQuery.support.cors = true;
+        jQuery.ajax({
+            url: url,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(parameters),
+            dataType: 'json',
+            success: function(res) {
+                jQuery("#ajaxElement_1_153 .loading").hide();
+                jQuery("#ajaxElement_1_153 .yes").show();
+                jQuery("#ajaxElement_1_153 .no").hide();
+                jQuery("#ajaxElement_1_153 .yes").html(res);
+            },
+            error: function(e) {
+                jQuery("#ajaxElement_1_153 .loading").hide();
+                jQuery("#ajaxElement_1_153 .yes").hide();
+                jQuery("#ajaxElement_1_153 .no").show();
+            }
+        });
+    } else {
+        jQuery("#ajaxElement_1_153 .loading").hide();
+        jQuery("#ajaxElement_1_153 .yes").hide();
+        jQuery("#ajaxElement_1_153 .no").show();
+    }
+});
+
+function stlRedirectajaxElement_1_153(page)
+{
+    var queryString = document.location.search;
+    if (queryString && queryString.length > 1) {
+        queryString = queryString.substring(1);
+        var parameters = '';
+        var arr = queryString.split('&');
+        for(var i=0; i < arr.length; i++) {
+            var item = arr[i];
+            var arr2 = item.split('=');
+            if (arr2 && arr2.length == 2) {
+                if (arr2[0] !== 'page') {
+                    parameters += item + '&';
+                }
+            }
+        }
+        parameters += 'page=' + page;
+        location.href = location.protocol + '//' + location.host + location.pathname + location.hash + '?' + parameters;
+    }
+}
+
+function stlJumpajaxElement_1_153(selObj)
+{
+    stlRedirectajaxElement_1_153(selObj.options[selObj.selectedIndex].value);
+}
+</script>
+
+    </div>
+    <div class="main_foot">
+<div class="foot">
+
+
+        <ul class="last">
+        <li><h1>解决方案</h1></li>
+        
+                <li><a href="/Medraut/channels/399.html">分析平台</a></li>
+        
+                <li><a href="/Medraut/channels/400.html">分布式数据库</a></li>
+        
+                <li><a href="/Medraut/channels/401.html">分布式文件系统</a></li>
+        
+        </ul>
+    
+
+
+        <ul class="last">
+        <li><h1>新闻资讯</h1></li>
+        
+                <li><a href="/Medraut/channels/403.html">新闻动态</a></li>
+        
+                <li><a href="/Medraut/channels/404.html">国内新闻</a></li>
+        
+                <li><a href="/Medraut/channels/405.html">国际新闻</a></li>
+        
+                <li><a href="/Medraut/channels/406.html">时政要闻</a></li>
+        
+        </ul>
+    
+
+
+        <ul class="last">
+        <li><h1>通知公告</h1></li>
+        
+                <li><a href="/Medraut/channels/408.html">公司公告</a></li>
+        
+                <li><a href="/Medraut/channels/409.html">公告公示</a></li>
+        
+                <li><a href="/Medraut/channels/410.html">公文发布</a></li>
+        
+        </ul>
+    
+
+
+        <ul>
+        <li><h1>关于我们</h1></li>
+        
+                <li><a href="/Medraut/channels/412.html">管理团队</a></li>
+        
+                <li><a href="/Medraut/channels/413.html">合作伙伴</a></li>
+        
+                <li><a href="/Medraut/channels/416.html">公司动态</a></li>
+        
+                <li><a href="/Medraut/channels/417.html">联系我们</a></li>
+        
+        </ul>
+    
+
+<div class="foot_r">
+		 <a href="http://t.qq.com/siteserver2011" target="_blank"><img src="/Medraut/images/weibo.svg"/></a>
+	   	 <a href="#none" class="weixin"><img src="/Medraut/images/weixin.svg" /></a>
+</div>
+</div>
+<div class="bottom or">
+ <p> 
+        
+        	<a href="http://docs.siteserver.cn/getting-started/what-can-do.html" target="_blank">联系我们</a>
+        
+        |
+          
+        	<a href="http://stl.siteserver.cn" target="_blank">English</a>
+        
+        |
+          
+        	<a href="http://developer.siteserver.cn/" target="_blank">开发者中心</a>
+        
+      <span> © Copyright 2017</span>
+  </p>
+</div>
+</div>    
+   <div class="eject">
+	  <div class="theme-mask"></div>
+	  <div class="popover1">
+	   <dl><dd><img src="/Medraut/upload/images/2017/9/t_7141531334.jpg" /></dd>
+	   <dt>扫描二维码关注我们</dt>
+	   <dt><a href="javascript:void(0)" class="close">确 认</a></dt>
+	   </dl>
+	   </div>
+	</div>
+  </body>
+</html>

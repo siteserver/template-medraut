@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SiteTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteTemplateName>Medraut</SiteTemplateName>
+  <PublishmentSystemType>CMS</PublishmentSystemType>
+  <WebSiteUrl />
+  <PicFileName>T_Medraut.png</PicFileName>
+  <Description />
+</SiteTemplate>

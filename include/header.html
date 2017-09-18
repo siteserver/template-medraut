@@ -1,0 +1,38 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{Stl.SiteUrl}/index.html">{stl:value type=logo}</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+          <stl:channels topLevel="0" groupChannel="nav">
+          <stl:if testType="UpChannelOrSelf">
+          <stl:yes>
+          		<li class="active"><stl:a></stl:a></li>
+          </stl:yes>
+          <stl:no>
+          		<li><stl:a></stl:a></li>
+          </stl:no>
+          </stl:if>
+          </stl:channels>
+          </ul>
+          
+          <ul class="navbar-right">
+          <stl:contents channelIndex="关于我们">
+             <stl:itemTemplate type="Item">  
+             <li><stl:a target="_blank">{Content.Title}</stl:a></li>
+        	 </stl:itemTemplate>
+             <stl:itemTemplate type="Separator">
+             <li><span></span></li>
+             </stl:itemTemplate>
+           </stl:contents>		 
+		   </ul>
+        </div>
+      </div>
+    </div>

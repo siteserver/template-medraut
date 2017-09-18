@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include> 
+    <stl:include file="/include/banner.html"></stl:include> 
+    <div class="about or">
+      <stl:include file="/include/tabs.html"></stl:include>
+      <div class="news or"> <stl:pageContents pageNum="10" order="AddDate">
+        <div class="list">
+          <div class="pic"><stl:a><img src="{Content.ImageUrl}"></stl:a></div>
+          <ul>
+            <li>
+              <h1><stl:a>
+                {Content.Title}
+                </stl:a></h1>
+            </li>
+            <li><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content><em>
+              {Channel.Title}
+              </em></li>
+            <li><stl:content type="Summary" isClearTags="true" wordNum="150" ellipsis="..."></stl:content><stl:a>查看全文</stl:a></li>
+          </ul>
+        </div>
+        </stl:pageContents> 
+        <div class="page">
+          <stl:pageItem type="PageNavigation" listNum="5">
+            <stl:yes>
+              <a href="{Current.Url}">{Current.Num}</a>
+            </stl:yes>
+            <stl:no>
+              <span>{Current.Num}</span>
+            </stl:no>
+          </stl:pageItem>
+        </div>
+      </div>
+    </div>
+    <stl:include file="/include/footer.html"></stl:include>
+  </body>
+</html>

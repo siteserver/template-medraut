@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include>
+    <div class="about_box big" style="background:url({stl.siteurl}/images/bg.jpg) no-repeat center top; background-size:cover;">
+      <h1>搜索结果页</h1>
+    </div>
+    <div class="Marketing_box">
+      <div class="search or">
+        <form method="get" action="{Stl.SiteUrl}/utils/search.html">
+          <input type="text" name="word" placeholder="搜索文章" class="txt">
+          <input type="submit" class="btn" value="">
+        </form>
+      </div>
+    </div>
+    <div class="cl"></div>
+    <div class="news or"> 
+      <stl:search type="title,content" isHighlight="true">
+        <stl:yes>
+          <stl:pageContents pageNum="10" isNoDup="true" order="AddDate">
+            <div class="list">
+              <div class="pic"><stl:a><img src="{Content.ImageUrl}"></stl:a></div>
+              <ul>
+                <li>
+                  <h1><stl:a>
+                    {Content.Title}
+                    </stl:a></h1>
+                </li>
+                <li><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content><em>
+                  {Channel.Title}
+                  </em></li>
+                <li><stl:content type="Summary" isClearTags="true" wordNum="150" ellipsis="..."></stl:content><stl:a>查看全文</stl:a></li>
+              </ul>
+            </div>
+          </stl:pageContents>
+          <div class="page">
+            <stl:pageItem type="PageNavigation" listNum="5">
+              <stl:yes>
+                <a href="{Current.Url}">{Current.Num}</a>
+              </stl:yes>
+              <stl:no>
+                <span>{Current.Num}</span>
+              </stl:no>
+            </stl:pageItem>
+          </div>
+        </stl:yes>
+        <stl:no>
+          <div class="alert alert-danger" role="alert">
+            <strong>抱歉!</strong> 找不到和您的查询相符的项目
+          </div>
+        </stl:no>
+        <stl:loading>
+          <div class="alert alert-info" role="alert">
+            <strong>提示!</strong> 系统正在搜索中，请稍后...
+          </div>
+        </stl:loading>
+      </stl:search>
+    </div>
+    <stl:include file="/include/footer.html"></stl:include>
+  </body>
+</html>

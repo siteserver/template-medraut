@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include>
+    <script type="text/javascript">
+      $("div.navbar-fixed-top").autoHidingNavbar();
+    </script>
+    <div class="about_box big" style="background:url({stl.siteurl}/images/bg.jpg) no-repeat center top; background-size:cover;">
+      <h1>{Content.Title}</h1>
+    </div>
+    <div class="insight box or">
+      <div class="top or">
+        <div class="fl">
+          <p><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></p>
+          <div class="shrae">   
+            <a href="http://t.qq.com/siteserver2011" target="_blank"><img src="/Medraut/images/weibo.svg" width="30" height="30"></a>
+            <a href="#none" class="weixin"><img src="/Medraut/images/weixin.svg" width="30" height="30"></a>
+          </div>
+        </div>
+      </div>
+      <div class="con or">
+        <p></p>
+        <stl:content type="Content"></stl:content>
+      </div>
+    </div>
+    <stl:include file="/include/footer.html"></stl:include>
+  </body>
+</html>
+
